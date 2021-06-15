@@ -39853,11 +39853,11 @@ function shouldUseToolCache(engine, version) {
 function getPlatformToolCache(platform) {
   // Hardcode paths rather than using $RUNNER_TOOL_CACHE because the prebuilt Rubies cannot be moved anyway
   if (platform.startsWith('ubuntu-')) {
-    return `${__dirname}/hostedtoolcache`
+    return path.join(__dirname, '..', '..', '..', '..', '..', '_tool')
   } else if (platform.startsWith('macos-')) {
-    return `${__dirname}/hostedtoolcache`
+    return path.join(__dirname, '..', '..', '..', '..', '..', '_tool')
   } else if (platform.startsWith('windows-')) {
-    return `${__dirname}/hostedtoolcache`
+    return path.join(__dirname, '..', '..', '..', '..', '..', '_tool')
   } else {
     throw new Error('Unknown platform')
   }
